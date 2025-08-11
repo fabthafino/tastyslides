@@ -24,19 +24,19 @@ const Navbar = () => {
     },
     {
       name: "Sign In",
-      url: "/signin",
+      url: "/auth/signin",
     },
   ];
   return (
     <nav className="flex items-center py-4 px-6 justify-between shadow-md">
     <Link href={"/"} className="flex items-center gap-2 z-50">
     <Image
-    src={"/new.png"}
-    alt="new"
+    src={"/slides.png"}
+    alt="slides"
     width={1000}
     height={1000}
-    className= "w-10 h-10"/>
-    <p>Tasty Slides</p>
+    className= "w-12 h-12"/>
+    <p className='text-xl'>Tasty Slides</p>
     </Link>
 
     {/* desktop view */}
