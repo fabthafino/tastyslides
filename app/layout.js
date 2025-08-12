@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AuthProvider from "@/components/AuthProvider";
 
 
 const raleway = Raleway({
@@ -20,9 +21,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${raleway.className} antialiased`}>
           
-        <Navbar/>
-        {children}
-        <Footer/>
+     <AuthProvider>
+      <Navbar/>
+      {children}
+       <Footer/>
+    </AuthProvider> 
       </body>
     </html>
   );

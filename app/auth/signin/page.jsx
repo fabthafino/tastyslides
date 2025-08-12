@@ -3,10 +3,17 @@ import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { signIn } from "@/auth";
+import { auth, signIn } from "@/auth"
+import { redirect } from "next/navigation";
 
+  const page = async () => {
+  const session = await auth()
+  
+  if (session) {
+    redirect("/")
+  }
 
-const page = () => {
+  console.log(session);
   return (
   // <main className="bg-white flex items-center justify-center min-h-screen px-4">
   
