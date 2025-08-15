@@ -26,7 +26,7 @@ import { redirect } from "next/navigation";
       <h2 className="text-3xl font-bold text-gray-900">Log in</h2>
       <p className="mt-2 text-sm text-gray-600">
         New to Tasty Slides?
-        <a href="#" className="text-orange-500 font-medium hover:underline"> Sign up here</a>
+        <a href="" className="text-orange-500 font-medium hover:underline"> Sign up here</a>
       </p>
     </div>
 
@@ -72,7 +72,7 @@ import { redirect } from "next/navigation";
     <form
       action={async () => {
         "use server"
-        await signIn("GoogleProvider")
+        await signIn("Google")
       }}
     >
     <button className="hover:cursor-pointer"><FaGoogle/></button>

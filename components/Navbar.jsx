@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { CgMenuRight } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -78,7 +78,7 @@ const Navbar = () => {
         onClick={handleClick}
       >
        <img src={session?.user?.image} alt={session?.user?.name.slice(0,1). toUpperCase()} 
-       className="w-13 h-13"/>
+       className="w-15 h-15 rounded-md"/>
 
       </Button>
       <Menu
@@ -92,9 +92,12 @@ const Navbar = () => {
           },
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>
+         <Link href={"/profile"}>Profile</Link></MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link href={"/drop-reviews"}>Add your reviews</Link></MenuItem>
+        <MenuItem onClick={handleClose}>
+        <button onClick={() => signOut()}>Sign Out</button></MenuItem>
       </Menu>
     </div>
 

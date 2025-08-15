@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
   return (
   <main className="min-h-dvh bg-[url(/chef.jpg)] bg-no-repeat bg-center bg-cover bg-fixed">
     <section className=" min-h-dvh bg-black/40 flex items-center justify-center">
@@ -24,5 +25,6 @@ export default function Home() {
     </div>
     </section>
 
-  </main>);
+  </main>
+  );
 };
