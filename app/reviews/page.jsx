@@ -46,8 +46,8 @@ const page = () => {
                 <h2>{rev.author}</h2>
               </div>
             </div>
-            <p className="text-lg">{rev.book}</p>
-            <p className="line-clamp-2">{rev.review}</p>
+            <p className="text-lg">{rev.recipe}</p>
+            <p className="line-clamp-2">{rev.reviews}</p>
             <div className="flex items-center justify-between">
               <p>{rev.timestamp}</p>
               <Link

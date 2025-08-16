@@ -1,5 +1,4 @@
 "use client"
-
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -78,8 +77,8 @@ const Navbar = () => {
         onClick={handleClick}
       >
        <img src={session?.user?.image} alt={session?.user?.name.slice(0,1). toUpperCase()} 
-       className="w-15 h-15 rounded-md"/>
-
+       className="w-15 h-15 rounded-md"
+       />
       </Button>
       <Menu
         id="basic-menu"

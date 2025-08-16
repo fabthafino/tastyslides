@@ -14,7 +14,7 @@ const page = async () => {
 
 return(
 <main>
-    <DropReviews/>
+    <DropReviews session={session} />
 </main>
   )
 }

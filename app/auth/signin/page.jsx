@@ -60,8 +60,8 @@ import { redirect } from "next/navigation";
       </div>
 
       {/* Log In Button */}
-      <button type="submit" className="hover:cursor-pointer w-full py-2 px-4 bg-blue-500 text-white font-semibold 
-                                      transition-colors duration-300rounded-full hover:bg-blue-700">
+      <button type="submit" className="hover:cursor-pointer w-full py-2 px-4 bg-blue-500 text-white
+      font-semibold transition-colors duration-300rounded-full hover:bg-blue-700">
         Log in
       </button>
     </form>

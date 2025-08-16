@@ -7,7 +7,8 @@ import { db } from "@/lib/firebase.config";
 import { FiLoader } from "react-icons/fi";
 
     const DropReviews = ({ session }) => {
-    const [loading, setLoading] = useState(false); const initialValues = {
+    const [loading, setLoading] = useState(false);
+    const initialValues = {
     recipe: "",
     reviews: ""
     };
@@ -86,13 +87,11 @@ import { FiLoader } from "react-icons/fi";
                   "Post Review"
                 )}
               </button>
-        </div>
-            
-        </Form>
+        </div>  
+      </Form>
     </Formik>
     </section>
-
-    </main>
+   </main>
   )
 }
 
