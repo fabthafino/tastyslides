@@ -1,12 +1,13 @@
-"use client"
+"use client";
+import React, { useState } from "react";
+import { Field, Form, Formik, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase.config";
+import { FiLoader } from "react-icons/fi";
 
-import React from 'react'
-import { Field, Form, Formik, ErrorMessage  } from 'formik';
- import * as Yup from 'yup';
-
- const DropReviews = () => {
-
-    const initialValues ={
+    const DropReviews = ({ session }) => {
+    const [loading, setLoading] = useState(false); const initialValues = {
     recipe: "",
     reviews: ""
     };
@@ -15,13 +16,31 @@ import { Field, Form, Formik, ErrorMessage  } from 'formik';
     recipe: Yup.string().required("Recipe name is required"),
     reviews: Yup.string()
     .required("Recipe review is required")
-    .min(20,"Minimun of 50 characters is required")
+    .min(50,"Minimun of 50 characters is required")
  })
  
-    const handleSubmit = () => {
-    console.log("Form Submitted");
-    
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      setLoading(true);
+      // create an object that would be sent to the db
+      const reviewData = {
+        author: session?.user?.name,
+        img: session?.user?.image,
+        timestamp: new Date().toLocaleDateString(),
+        ...values,
+      };
+
+      const docRef = await addDoc(collection(db, "reviews"), reviewData);
+
+      console.log("Document written with ID: ", docRef.id);
+      resetForm();
+    } catch (error) {
+      console.error("Error adding data", error);
+      alert("Oops, an error occurred.");
+    } finally {
+      setLoading(false);
     }
+  };
 
   return (
     // <main className='min-h-dvh lg:p-6 p-3 space-y-10 bg-gray-50'>
@@ -56,10 +75,17 @@ import { Field, Form, Formik, ErrorMessage  } from 'formik';
             </div>
 
         <div className="flex justify-end">
-            <button className="bg-yellow-700 hover:bg-yellow-800 transition-colors duration-300 text-white 
-            text-2xlrounded-md py-2 px-5">
-            Post Review
-            </button>
+              <button
+                disabled={loading}
+                type="submit"
+                className="bg-yellow-700 hover:bg-yellow-800 transition-colors duration-300 text-white text-xl rounded-md py-2 px-5"
+              >
+                {loading ? (
+                  <FiLoader className="animate-spin text-2xl text-center" />
+                ) : (
+                  "Post Review"
+                )}
+              </button>
         </div>
             
         </Form>

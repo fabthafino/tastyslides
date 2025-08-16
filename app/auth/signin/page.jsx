@@ -10,7 +10,7 @@ import { redirect } from "next/navigation";
   const session = await auth()
   
   if (session) {
-    redirect("/")
+    redirect("/drop-reviews")
   }
 
   console.log(session);
