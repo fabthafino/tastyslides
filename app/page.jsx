@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
   <main>
-    {/* hero section */}
+    {/* hero section
     <section className="min-h-dvh bg-[url(/chef.jpg)] bg-no-repeat bg-center bg-cover bg-fixed">
     <div className=" min-h-dvh bg-black/40 flex items-center justify-center">
     <div className="lg:max-w-4xl max-lg:p-3 space-y-10">
@@ -17,22 +17,56 @@ export default function Home() {
             <span className="italic font-semibold  text-2xl">Explore, Cook, Enjoy!</span>
           </p>
 
-      {/* <div className=" flex max-md:flex-col items-cetner justify-center gap-10">
+      <div className=" flex max-md:flex-col items-cetner justify-center gap-10">
         <Link href={"#"} className="bg-yellow-600 text-white px-10 py-5 rounded-md text-xl font-bold 
         hover:bg-yellow-700 transition-colors duration-300 text-center">Get Started</Link>
         <Link href={"#"} className=" bg-gray-200 text-black px-10 py-5 rounded-md text-xl font-bold 
         hover:bg-gray-200 transition-colors duration-300 text-center">Our Story</Link>
-      </div> */}
+      </div> *
     </div>
     </div>
-    </section>
+    </section> */}
 
-    {/* new section */}
+       {/* HEADLINE */}
+   <section>
+   <div className="bg-beige-300 py-16 px-6 sm:px-8 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+    {/* Left Side - Image */}
+    <div className="flex justify-center">
+      <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full  border-8 border-white shadow-lg">
+        <img
+          src="welcome.jpg" alt="Chef" className="w-full h-fit object-cover" />
+      </div>
+    </div>
+
+    {/* Right Side - Content */}
+    <div>
+      <h2 className="lg:text-5xl text-3xl font-bold text-gray-900 mb-4 ">
+        Welcome to <span className="text-yellow-600 font-semibold ">Tasty Slides</span>
+      </h2>
+      <p className="text-gray-800 mb-6 text-justify">
+      Your ultimate destination for delicious and easy-to-make recipes, cooking tips, and food inspiration. 
+      Whether you're a seasoned chef or a kitchen newbie browse through our recipe collection to discover new flavors, and get creative in the kitchen.
+      We're passionate about food and can't wait to share our passion with you
+      </p>
+
+      {/* Button */}
+      <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full 
+      cursor-pointer transition">
+        About Us
+      </button>
+    </div>
+  </div>
+</div>
+        </section>
+
+    {/* popular food section */}
     <section className="space-y-2">
    <div className="items-center justify-center bg-white p-5 space-y-3">
-    <h2 className="lg:text-3xl text-1xl font-bold text-black">Popular Foods!</h2>
+    <h2 className="lg:text-3xl text-2xl font-bold text-black">Popular Foods!</h2>
 
-    <div className="grid lg:grid-cols-4 grid-cols-2 gap-3 w-full items-center justify-center">
+    <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-3 w-full items-center justify-center">
     <div className="relative cursor-pointer space-y-2">
       <div> <img src="jollof.jpg" alt="food" className="rounded-sm object-contain w-full"/></div>
       <div>
@@ -72,6 +106,89 @@ export default function Home() {
     </div>
   </div>
     </section>
+
+        {/* choose us section */}
+    <section>
+   <div className="bg-gray-600 py-16 px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Heading */}
+    <h2 className="text-3xl font-extrabold text-gray-100   sm:text-4xl">
+      WHY CHOOSE US?
+    </h2>
+    <p className="mt-2 text-gray-300  mx-auto">
+      Because you get the best food recipes from us.
+    </p>
+
+    {/* Feature Grid */}
+    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3">
+      {/* Card 1 */}
+      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+        <div className="text-green-500 text-4xl mb-4">
+         <img src="bee.png" alt="bee" className="h-20 w-fit"/>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900">Healthy Food</h3>
+        <p className="mt-2 text-gray-500 text-sm">
+          We serve all healthy food here. You can choose any food you like.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+        <div className="text-green-500 text-4xl mb-4">
+        <img src="badge.png" alt="bee" className="h-20 w-fit"/>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900">Best Quality</h3>
+        <p className="mt-2 text-gray-500 text-sm">
+          Our food is excellent. You will get exactly what you want here.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+      {/* content creators section */}
+ <section>
+ <div className="py-7 sm:px-6 lg:px-13">
+  <div className="">
+    {/* Header */}
+    <div className="flex items-center justify-center mb-5">
+      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase">Our Top Content Creators</h2>
+    </div>
+
+    {/* Chefs Grid */}
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* Card 1 */}
+      <div className="shadow-md text-center p-3 cursor-pointer">
+        <img
+          src="people5.jpg" alt="CC 2" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 text-lg font-semibold text-gray-900">John Doe</h3>
+      </div>
+
+      {/* Card 2 */}
+        <div className="shadow-md text-center p-3 cursor-pointer">
+        <img
+          src="people2.jpg" alt="CC 2" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 text-lg font-semibold text-gray-900">Jane Doe</h3>
+      </div>
+
+      {/* Card 3 */}
+      <div className="shadow-md text-center p-3 cursor-pointer">
+        <img
+          src="people3.jpg" alt="CC 3" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 text-lg font-semibold text-gray-900">Jane Wick</h3>
+      </div>
+
+      {/* Card 4 */}
+      <div className="shadow-md text-center p-3 cursor-pointer">
+        <img
+          src="people1.jpg" alt="CC 4" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 text-lg font-semibold text-gray-900">John Wick</h3>
+      </div>
+      </div>
+     </div>
+    </div>
+  </section>
 
   </main>
   );
