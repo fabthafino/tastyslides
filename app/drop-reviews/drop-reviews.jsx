@@ -28,6 +28,7 @@ import { FiLoader } from "react-icons/fi";
         author: session?.user?.name,
         img: session?.user?.image,
         timestamp: new Date().toLocaleDateString(),
+        userId: session?.user?.id,
         ...values,
       };
 

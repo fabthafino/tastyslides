@@ -6,12 +6,13 @@ import { FaGithub } from "react-icons/fa";
 import { auth, signIn } from "@/auth"
 import { redirect } from "next/navigation";
 
-  const page = async () => {
-  const session = await auth()
-  
+const page = async () => {
+  const session = await auth();
+
   if (session) {
-    redirect("/drop-reviews")
+    redirect("/drop-reviews");
   }
+
 
   console.log(session);
   return (
@@ -71,8 +72,8 @@ import { redirect } from "next/navigation";
 
     <form
       action={async () => {
-        "use server"
-        await signIn("Google")
+        "use server";
+        await signIn("google");
       }}
     >
     <button className="hover:cursor-pointer"><FaGoogle/></button>
@@ -83,8 +84,8 @@ import { redirect } from "next/navigation";
     
         <form
       action={async () => {
-        "use server"
-        await signIn("GitHub")
+        "use server";
+        await signIn("GitHub");
       }}
     >
     <button className="hover:cursor-pointer"><FaGithub/></button>

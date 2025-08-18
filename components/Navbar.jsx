@@ -119,13 +119,12 @@ const Navbar = () => {
                        ${navOpen ? "block" : "hidden"}`}>
         <div className="flex flex-col items-center gap-16 pt-20">
         {navItems.map((item, index) => (
-          <Link key={index} href={item.url}  className="text-lg ">
+          <Link onClick={()=> setNavOpen(false)} key={index} href={item.url}  className="text-lg ">
             {item.name}
           </Link>
         ))}
       </div>
       </div>
-
     </nav>
   )
 }
