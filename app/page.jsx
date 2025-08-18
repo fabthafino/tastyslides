@@ -62,7 +62,7 @@ export default function Home() {
         </section>
 
     {/* popular food section */}
-    <section className="space-y-2">
+    {/* <section className="space-y-2">
    <div className="items-center justify-center bg-white p-5 space-y-3">
     <h2 className="lg:text-3xl text-2xl font-bold text-black">Popular Foods!</h2>
 
@@ -105,7 +105,63 @@ export default function Home() {
     </div>
     </div>
   </div>
-    </section>
+    </section> */}
+
+    {/* POPULAR FOOD */}
+       <section>
+ <div className="py-7 sm:px-6 lg:px-13">
+  <div className="">
+    {/* Header */}
+    <div className="flex items-center justify-center mb-5">
+      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase">Our Most Popular Foods!</h2>
+    </div>
+
+    {/* Chefs Grid */}
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* Card 1 */}
+      <div className="shadow-md p-3 cursor-pointer">
+        <img
+          src="jollof.jpg" alt="jollof rice" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Jollof Rice</h3>
+      <p className="lg:text-base text-xs px-2 text-justify">A West African classic, is a one-pot wonder that's easy
+        to make and packed with spicy goodness. Get ready for a flavor explosion!
+      </p>
+      </div>
+
+      {/* Card 2 */}
+     <div className="shadow-md p-3 cursor-pointer">
+        <img
+          src="afang.jpeg" alt="Afang Soup" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Afang Soup</h3>
+      <p className="lg:text-base text-xs px-2 text-justify">
+       Nigeria's deliciously rich & spicy stew made with afang leaves, meat or fish, and a blend of flavorful spices.
+       A true West African culinary delight! </p>
+      </div>
+
+      {/* Card 3 */}
+     <div className="shadow-md p-3 cursor-pointer">
+        <img
+          src="egusi.jpg" alt="Egusi Soup" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Egusi Soup</h3>
+      <p className="lg:text-base text-xs px-2 text-justify">
+        A Nigerian favorite made with ground melon seeds, vegetables, and your choice of protein.
+        Rich, flavorful, and nourishing - a West African classic!</p>
+      </div>
+
+      {/* Card 4 */}
+     <div className="shadow-md p-3 cursor-pointer">
+        <img
+          src="yam.jpg" alt="Yam and Egg" className="w-full h-fit object-cover rounded-lg" />
+        <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900 "><br />Yam and Egg</h3>
+      <p className="lg:text-base text-xs px-2 text-justify">
+        A match made in heaven! Boiled or fried yam paired with scrambled or fried eggs - 
+        a simple satisfying Nigerian combo.</p>
+      </div>
+      </div>
+     </div>
+    </div>
+  </section>
+
 
         {/* choose us section */}
     <section>
