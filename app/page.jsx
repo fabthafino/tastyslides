@@ -42,8 +42,8 @@ export default function Home() {
 
     {/* Right Side - Content */}
     <div>
-      <h2 className="lg:text-5xl text-3xl font-bold text-gray-900 mb-4 ">
-        Welcome to <span className="text-yellow-500 font-semibold ">Tasty Slides</span>
+      <h2 className="lg:text-5xl text-3xl font-semibold text-gray-900 mb-4 ">
+        Welcome to <span className="text-orange-500 font-bold ">Tasty Slides</span>
       </h2>
       <p className="text-gray-800 mb-6 text-justify ">
       Your ultimate destination for delicious and easy-to-make recipes, cooking tips, and food inspiration. 
@@ -52,8 +52,8 @@ export default function Home() {
       </p>
 
       {/* Button */}
-      <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-full 
-      cursor-pointer transition">
+      <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full 
+      cursor-pointer transition-colors duration-300">
         About Us
       </button>
     </div>
@@ -172,7 +172,7 @@ export default function Home() {
       WHY CHOOSE US?
     </h2>
     <p className="mt-2 text-gray-300  mx-auto lg:text-xl text-sm">
-      Because you get the best food recipes from us.
+      Because you get the best food contents from us.
     </p>
 
     {/* Feature Grid */}
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
         <h3 className="text-lg font-semibold text-gray-900">Healthy Food</h3>
         <p className="mt-2 text-gray-500 text-sm">
-          We serve all healthy food here. You can choose any food you like.
+          We promote and provide healthy food contents here.
         </p>
       </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
   <div className="">
     {/* Header */}
     <div className="flex items-center justify-center mb-5">
-      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase ml-2">Our Top Content Creators</h2>
+      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase ml-2">Top Content Creators</h2>
     </div>
 
     {/* Chefs Grid */}
@@ -264,7 +264,7 @@ export default function Home() {
       />
       <button
         type="submit"
-        className="bg-orange-500 px-5 py-2 text-white font-medium hover:bg-orange-600 transition"
+        className="bg-orange-500 hover:bg-orange-600 px-5 py-2 text-white font-medium transition-colors duration-300"
       >
         Subscribe
       </button>
