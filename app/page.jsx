@@ -34,25 +34,25 @@ export default function Home() {
 
     {/* Left Side - Image */}
     <div className="flex justify-center">
-      <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full  border-8 border-white shadow-lg">
+      <div className="  w-80 h-80  sm:w-96 sm:h-96">
         <img
-          src="welcome.jpg" alt="Chef" className="w-full h-fit object-cover" />
+          src="welcome.jpg" alt="Chef" className="w-auto h-auto" />
       </div>
     </div>
 
     {/* Right Side - Content */}
     <div>
       <h2 className="lg:text-5xl text-3xl font-bold text-gray-900 mb-4 ">
-        Welcome to <span className="text-yellow-600 font-semibold ">Tasty Slides</span>
+        Welcome to <span className="text-yellow-500 font-semibold ">Tasty Slides</span>
       </h2>
-      <p className="text-gray-800 mb-6 text-justify">
+      <p className="text-gray-800 mb-6 text-justify ">
       Your ultimate destination for delicious and easy-to-make recipes, cooking tips, and food inspiration. 
       Whether you're a seasoned chef or a kitchen newbie browse through our recipe collection to discover new flavors, and get creative in the kitchen.
       We're passionate about food and can't wait to share our passion with you
       </p>
 
       {/* Button */}
-      <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full 
+      <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-full 
       cursor-pointer transition">
         About Us
       </button>
@@ -113,7 +113,7 @@ export default function Home() {
   <div className="">
     {/* Header */}
     <div className="flex items-center justify-center mb-5">
-      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase">Our Most Popular Foods!</h2>
+      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase ml-2">Our Most Popular Foods!</h2>
     </div>
 
     {/* Chefs Grid */}
@@ -121,7 +121,7 @@ export default function Home() {
       {/* Card 1 */}
       <div className="shadow-md p-3 cursor-pointer">
         <img
-          src="jollof.jpg" alt="jollof rice" className="w-full h-fit object-cover rounded-lg" />
+          src="jollof.jpg" alt="jollof rice" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Jollof Rice</h3>
       <p className="lg:text-base text-xs px-2 text-justify">A West African classic, is a one-pot wonder that's easy
         to make and packed with spicy goodness. Get ready for a flavor explosion!
@@ -131,7 +131,7 @@ export default function Home() {
       {/* Card 2 */}
      <div className="shadow-md p-3 cursor-pointer">
         <img
-          src="afang.jpeg" alt="Afang Soup" className="w-full h-fit object-cover rounded-lg" />
+          src="afang.jpeg" alt="Afang Soup" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Afang Soup</h3>
       <p className="lg:text-base text-xs px-2 text-justify">
        Nigeria's deliciously rich & spicy stew made with afang leaves, meat or fish, and a blend of flavorful spices.
@@ -141,7 +141,7 @@ export default function Home() {
       {/* Card 3 */}
      <div className="shadow-md p-3 cursor-pointer">
         <img
-          src="egusi.jpg" alt="Egusi Soup" className="w-full h-fit object-cover rounded-lg" />
+          src="egusi.jpg" alt="Egusi Soup" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900">Egusi Soup</h3>
       <p className="lg:text-base text-xs px-2 text-justify">
         A Nigerian favorite made with ground melon seeds, vegetables, and your choice of protein.
@@ -151,7 +151,7 @@ export default function Home() {
       {/* Card 4 */}
      <div className="shadow-md p-3 cursor-pointer">
         <img
-          src="yam.jpg" alt="Yam and Egg" className="w-full h-fit object-cover rounded-lg" />
+          src="yam.jpg" alt="Yam and Egg" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 ml-2 text-xl font-semibold text-gray-900 "><br />Yam and Egg</h3>
       <p className="lg:text-base text-xs px-2 text-justify">
         A match made in heaven! Boiled or fried yam paired with scrambled or fried eggs - 
@@ -165,13 +165,13 @@ export default function Home() {
 
         {/* choose us section */}
     <section>
-   <div className="bg-gray-600 py-16 px-4 sm:px-6 lg:px-8">
+   <div className="bg-gray-600 py-12 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto text-center">
     {/* Heading */}
     <h2 className="text-3xl font-extrabold text-gray-100   sm:text-4xl">
       WHY CHOOSE US?
     </h2>
-    <p className="mt-2 text-gray-300  mx-auto">
+    <p className="mt-2 text-gray-300  mx-auto lg:text-xl text-sm">
       Because you get the best food recipes from us.
     </p>
 
@@ -180,7 +180,7 @@ export default function Home() {
       {/* Card 1 */}
       <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
         <div className="text-green-500 text-4xl mb-4">
-         <img src="bee.png" alt="bee" className="h-20 w-fit"/>
+         <img src="bee.png" alt="bee" className="w-auto h-25"/>
         </div>
         <h3 className="text-lg font-semibold text-gray-900">Healthy Food</h3>
         <p className="mt-2 text-gray-500 text-sm">
@@ -191,7 +191,7 @@ export default function Home() {
       {/* Card 2 */}
       <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
         <div className="text-green-500 text-4xl mb-4">
-        <img src="badge.png" alt="bee" className="h-20 w-fit"/>
+        <img src="badge.png" alt="bee" className="w-auto h-25"/>
         </div>
         <h3 className="text-lg font-semibold text-gray-900">Best Quality</h3>
         <p className="mt-2 text-gray-500 text-sm">
@@ -209,7 +209,7 @@ export default function Home() {
   <div className="">
     {/* Header */}
     <div className="flex items-center justify-center mb-5">
-      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase">Our Top Content Creators</h2>
+      <h2 className="text-2xl font-bold text-black  items-center justify-center uppercase ml-2">Our Top Content Creators</h2>
     </div>
 
     {/* Chefs Grid */}
@@ -217,33 +217,59 @@ export default function Home() {
       {/* Card 1 */}
       <div className="shadow-md text-center p-3 cursor-pointer">
         <img
-          src="people5.jpg" alt="CC 2" className="w-full h-fit object-cover rounded-lg" />
+          src="people5.jpg" alt="CC 2" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 text-lg font-semibold text-gray-900">John Doe</h3>
       </div>
 
       {/* Card 2 */}
         <div className="shadow-md text-center p-3 cursor-pointer">
         <img
-          src="people2.jpg" alt="CC 2" className="w-full h-fit object-cover rounded-lg" />
+          src="people2.jpg" alt="CC 2" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 text-lg font-semibold text-gray-900">Jane Doe</h3>
       </div>
 
       {/* Card 3 */}
       <div className="shadow-md text-center p-3 cursor-pointer">
         <img
-          src="people3.jpg" alt="CC 3" className="w-full h-fit object-cover rounded-lg" />
+          src="people3.jpg" alt="CC 3" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 text-lg font-semibold text-gray-900">Jane Wick</h3>
       </div>
 
       {/* Card 4 */}
       <div className="shadow-md text-center p-3 cursor-pointer">
         <img
-          src="people1.jpg" alt="CC 4" className="w-full h-fit object-cover rounded-lg" />
+          src="people1.jpg" alt="CC 4" className="w-auto h-auto rounded-lg" />
         <h3 className="mt-3 text-lg font-semibold text-gray-900">John Wick</h3>
       </div>
       </div>
      </div>
     </div>
+  </section>
+
+
+      {/* NEWSLETTER 1 */}
+    <section>
+      {/* Content */}
+  <div className=" flex flex-col items-center justify-center px-6 py-10 text-center text-gray-800">
+    <h2 className="text-lg sm:text-xl md:text-2xl font-semibold ">
+      Get new contents by <br/>Subscribing to our Newsletter
+    </h2>
+
+    {/* Input + Button */}
+    <form className="mt-4 flex w-full max-w-md">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="w-full px-4 py-2 sm:px2 sm:py-1 text-gray-900 border"
+      />
+      <button
+        type="submit"
+        className="bg-orange-500 px-5 py-2 text-white font-medium hover:bg-orange-600 transition"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
   </section>
 
   </main>
