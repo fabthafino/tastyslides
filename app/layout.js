@@ -12,7 +12,7 @@ const raleway = Raleway({
 
 export const metadata = {
   title: "Tasty Slides | Cooking Made Easy",
-  description: "Your go-to source for recipes and food trends",
+  description: "Your go-to hub for food trends",
 };
 
 export default function RootLayout({ children }) {
@@ -20,11 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${raleway.className} antialiased`}>
-          
      <AuthProvider>
-      <Navbar/>
+      <Navbar />
       {children}
-       <Footer/>
+       <Footer />
     </AuthProvider> 
       </body>
     </html>

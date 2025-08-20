@@ -6,9 +6,8 @@ import { CgMenuRight } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
 import { useSession, signOut } from "next-auth/react";
 import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -23,7 +22,7 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   
-  console.log(session);
+  (session);
 
     const navItems = [
     {
@@ -67,46 +66,50 @@ const Navbar = () => {
           </Link>
         ))}
 
-        {session ? (
-         <div>
-      <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-       <img src={session?.user?.image} alt={session?.user?.name.slice(0,1). toUpperCase()} 
-       className="w-15 h-15 rounded-md"
-       />
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        slotProps={{
-          list: {
-            'aria-labelledby': 'basic-button',
-          },
-        }}
-      >
-        <MenuItem onClick={handleClose}>
-         <Link href={"/profile"}>Profile</Link></MenuItem>
-        <MenuItem onClick={handleClose}>
-        <Link href={"/drop-reviews"}>Add your reviews</Link></MenuItem>
-        <MenuItem onClick={handleClose}>
-        <button onClick={() => signOut()}>Sign Out</button></MenuItem>
-      </Menu>
-    </div>
-
+         {session ? (
+          <div>
+            <button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
+              <img
+                src={session?.user?.image}
+                alt={session?.user?.name.slice(0, 1).toUpperCase()}
+                className="w-10 h-10 rounded-full"
+              />
+            </button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              slotProps={{
+                list: {
+                  "aria-labelledby": "basic-button",
+                },
+              }}
+            >
+              <MenuItem onClick={handleClose}>
+                <Link href={"/profile"}>Profile</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link href={"/drop-reviews"}>Add your Reviews</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <button onClick={() => signOut()}>Sign Out</button>
+              </MenuItem>
+            </Menu>
+          </div>
         ) : (
-        <Link href={"/auth/signin"}
-        className="text-lg hover:text-yellow-700 hover:underline">
-          Sign In
-        </Link>
-      )}
-    </div>
+          <Link
+            href={"/auth/signin"}
+            className="text-lg hover:text-yellow-700 hover:underline"
+          > Sign In</Link>
+        )}
+      </div>
 
         {/* mobile and tab view */}
       <div className="lg:hidden z-50">
@@ -123,10 +126,62 @@ const Navbar = () => {
             {item.name}
           </Link>
         ))}
-      </div>
+          {session ? (
+            <div>
+              <button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <img
+                  src={session?.user?.image}
+                  alt={session?.user?.name.slice(0, 1).toUpperCase()}
+                  className="w-10 h-10 rounded-full"
+                />
+              </button>
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                slotProps={{
+                  list: {
+                    "aria-labelledby": "basic-button",
+                  },
+                }}
+              >
+                <MenuItem onClick={handleClose}>
+                  <Link href={"/profile"} onClick={() => setNavOpen(false)}>
+                    Profile
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link
+                    onClick={() => setNavOpen(false)}
+                    href={"/drop-reviews"}
+                  >
+                    Add your Reviews
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <button onClick={() => signOut()}>Sign Out</button>
+                </MenuItem>
+              </Menu>
+            </div>
+          ) : (
+            <Link
+              href={"/auth/signin"}
+              className="text-lg hover:text-yellow-700 hover:underline"
+            >
+              Sign In
+            </Link>
+          )}
+        </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar

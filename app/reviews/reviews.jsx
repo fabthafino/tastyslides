@@ -14,16 +14,16 @@ const Reviews = ({session }) => {
     const querySnapshot = await getDocs(collection(db, "reviews"));
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
+     (doc.id, " => ", doc.data());
       const reviewsObject = {
         id: doc.id,
         ...doc.data()
       };
-      console.log(reviewsObject);
+      (reviewsObject);
       reviewsArray.push(reviewsObject)
       
     });
-    console.log(reviewsArray);
+    (reviewsArray);
     setReviews(reviewsArray)
     
   };

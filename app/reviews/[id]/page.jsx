@@ -10,14 +10,14 @@ const singleReview = async (id) => {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
+      ("Document data:", docSnap.data());
       return { id, ...docSnap.data() };
     } else {
       // docSnap.data() will be undefined in this case
-      console.log("No such document!");
+      ("No such document!");
     }
   } catch (error) {
-    console.error("An error occurred", error);
+    ("An error occurred", error);
     alert("Oops, somthing went wrong");
   }
 };
