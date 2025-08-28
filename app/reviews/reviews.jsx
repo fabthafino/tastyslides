@@ -6,7 +6,7 @@ import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase.config";
 import { FaRegTrashCan } from "react-icons/fa6";  
 
-const Reviews = ({session }) => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([])
 
   const fetchReviews = async () => {
@@ -57,11 +57,11 @@ const Reviews = ({session }) => {
                   />
                   <h2>{rev.author}</h2>
                 </div>
-                {session.user.id == rev.userId ? (
+                {/* {session.user.id == rev.userId ? (
                   <button onClick={() => handleDelete(rev.id)} className="">
                     <FaRegTrashCan />
                   </button>
-                ) : null}
+                ) : null} */}
               </div>
             </div>
             <p className="text-lg">{rev.recipe}</p>

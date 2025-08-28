@@ -9,7 +9,7 @@ const page = async () => {
   const session = await auth();
 
   if (session) {
-    redirect("/drop-reviews");
+    redirect("/");
   }
   
   return (
